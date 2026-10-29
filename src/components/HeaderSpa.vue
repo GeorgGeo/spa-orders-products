@@ -49,7 +49,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 24px;
-  border-bottom: 1px solid #e0e0e0;
+  /* border-bottom: 1px solid #e0e0e0; */
+  /* Тень только снизу */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   gap: 24px;
 }
@@ -106,7 +108,8 @@
   flex-shrink: 0;
 }
 .header__date {
-  text-align: right;
+  display: flex;
+  gap: 5px;
   font-size: 13px;
   color: #333;
   line-height: 1.4;
@@ -121,5 +124,28 @@
 .header__clock-icon {
   width: 16px;
   height: 16px;
+}
+@media (max-width: 576px) {
+  .header {
+    flex-wrap: wrap;
+    row-gap: 12px;
+    padding: 5%;
+  }
+  .header__logo {
+    order: 1;
+  }
+  .header__datetime {
+    order: 2;
+    margin-left: auto;
+  }
+  .header__search {
+    order: 3;
+    flex: 0 0 100%; /* Ключевое изменение: отменяем flex: 1 и задаём фиксированную ширину 100% */
+    max-width: 100%;
+  }
+  .header__search-input {
+    height: 44px;
+    font-size: 16px;
+  }
 }
 </style>

@@ -1,5 +1,6 @@
 <script setup>
 import HeaderSpa from './components/HeaderSpa.vue';
+import MainPage from './components/MainPage.vue';
 
 // import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
@@ -22,6 +23,7 @@ import HeaderSpa from './components/HeaderSpa.vue';
   <RouterView /> -->
   <div>
     <HeaderSpa />
+    <MainPage />
   </div>
 </template>
 
